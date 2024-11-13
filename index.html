@@ -1,0 +1,119 @@
+<head>
+    
+</head>
+<body>
+    <canvas id="canvas"></canvas>
+
+    <center>
+        <input id="thoughtInput" placeholder="Type a thought here..." class="css-input">
+        <br>
+        <button type="submit" id="tossThought" class="css-button">Toss that thought</button>
+    </center>
+
+    <script type="module">
+        import noisejs from 'https://cdn.jsdelivr.net/npm/noisejs@2.1.0/+esm'
+        window.noisejs = noisejs
+    </script>
+    <script src="index.js"></script>
+
+    <style>
+        body{
+            font-family: monospace;
+            user-select: none;
+        }
+
+        #canvas{
+            position: absolute;
+            left: 0px;
+            top: 0px;
+            z-index: -999;
+        }
+
+        .moveable{
+            position: absolute;
+            z-index: 1000;
+            color: white;
+        }
+
+        .css-input {
+            box-sizing: border-box;
+            margin: 0px;
+            min-width: 0px;
+            display: block;
+            width: 40%;
+            padding: 8px;
+            appearance: none;
+            font-size: inherit;
+            line-height: inherit;
+            border-radius: 4px;
+            background-color: var(--theme-ui-colors-elevated,#3d383c);
+            color: var(--theme-ui-colors-text,#ffffff);
+            font-family: inherit;
+            border: 0px;
+        }
+
+        .css-button {
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            display: inline-block;
+            text-align: center;
+            line-height: inherit;
+            -webkit-text-decoration: none;
+            text-decoration: none;
+            font-size: inherit;
+            padding-left: 16px;
+            padding-right: 16px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            color: var(--theme-ui-colors-white,#ffffff);
+            background-color: var(--theme-ui-colors-primary,#ec3750);
+            border: 0;
+            border-radius: 4px;
+            cursor: pointer;
+            font-family: inherit;
+            font-weight: 700;
+            border-radius: 99999px;
+            display: -webkit-inline-box;
+            display: -webkit-inline-flex;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-align-items: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -webkit-justify-content: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.125);
+            -webkit-letter-spacing: 0.009em;
+            -moz-letter-spacing: 0.009em;
+            -ms-letter-spacing: 0.009em;
+            letter-spacing: 0.009em;
+            -webkit-tap-highlight-color: transparent;
+            -webkit-transition: -webkit-transform .125s ease-in-out,box-shadow .125s ease-in-out;
+            -webkit-transition: transform .125s ease-in-out,box-shadow .125s ease-in-out;
+            transition: transform .125s ease-in-out,box-shadow .125s ease-in-out;
+        }
+
+        h2 {
+            box-sizing: border-box;
+            margin: 0;
+            min-width: 0;
+            margin-top: 16px;
+            font-size: 20px;
+            font-weight: 400;
+            -webkit-letter-spacing: 0.009em;
+            -moz-letter-spacing: 0.009em;
+            -ms-letter-spacing: 0.009em;
+            letter-spacing: 0.009em;
+            line-height: 1.25;
+            margin-top: 0;
+            margin-bottom: 16px;
+        }
+    </style>
+</body>
