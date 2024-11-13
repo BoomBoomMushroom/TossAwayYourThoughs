@@ -139,12 +139,14 @@ document.addEventListener("mouseup", (e)=>{
 })
 
 setInterval(()=>{
+    /*
     if(noise==null){
         try{
             noise = new noisejs.Noise(Math.random())
         }
         catch(e){ return }
     }
+    */
 
     let now = Date.now();
     let dt = now - lastUpdate;
@@ -256,8 +258,9 @@ setInterval(()=>{
     ctx.fillStyle = waterPattern
     ctx.fill();
 
-    let value = noise.simplex3(0, 0, t/10) + 0.2
-    waterPattern = interpolateColor("#454af5", "#03cefc", value)
+    //let value = noise.simplex3(0, 0, t/10) + 0.2
+    waterPattern = "#454af5"
+    //waterPattern = interpolateColor("#454af5", "#03cefc", value)
 
     /*
     let depth = 3000
